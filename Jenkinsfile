@@ -14,5 +14,12 @@ pipeline {
       }
     }
 
+    stage('Test2') {
+      steps {
+        git(url: 'https://github.com/urvitambe/trial1.git', branch: 'master')
+        sh 'python hw.py'
+      }
+    }
+
   }
 }
